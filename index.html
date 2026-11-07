@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name — Personal Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Animated background -->
+  <canvas id="particles"></canvas>
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+
+  <!-- Custom cursor -->
+  <div class="cursor"></div>
+  <div class="cursor-dot"></div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <span class="nav-indicator"></span>
+    <button class="nav-link active" data-page="home">About Me</button>
+    <button class="nav-link" data-page="hobbies">Hobbies</button>
+    <button class="nav-link" data-page="music">Music</button>
+    <button id="themeBtn" class="theme-btn" title="Change theme">🎨</button>
+  </nav>
+
+  <main>
+    <!-- ============ PAGE 1: ABOUT ME ============ -->
+    <section id="home" class="page active">
+      <div class="hero glass">
+        <div class="avatar-wrap">
+          <div class="avatar">YN</div>
+          <div class="ring"></div>
+        </div>
+
+        <p class="hello">Hello there 👋, I'm</p>
+        <h1 class="name" id="name" title="Click me!">Janmark Allen Panzo</h1>
+        <h2 class="role">I am a <span id="typed"></span><span class="caret">|</span></h2>
+
+        <p class="bio">
+          Hi I'm Allen, I'm from Philippines. I am currently a student at the University of the Philippines.
+           I love to learn new things and explore new places. 
+           My hobbies include Running, playing Basketball, Swimming, playing the guitar and, gaming. 
+           You'll find out everything about me in this website.
+
+        </p>
+
+        <div class="facts">
+          <div class="fact"><span class="count" data-target="16">0</span><small>Years Old</small></div>
+          <div class="fact"><span class="count" data-target="3">0</span><small>Hobbies</small></div>
+          <div class="fact"><span class="count" data-target="50">0</span><small>Songs on Repeat</small></div>
+        </div>
+
+        <div class="info-grid">
+          <div class="info"><span>📍</span><div><small>Location</small><p>Mandaluyong, Philippines</p></div></div>
+          <div class="info"><span>🎓</span><div><small>School / Work</small><p>JRU</p></div></div>
+          <div class="info copy" data-copy="you@example.com"><span>✉️</span><div><small>EMAIL (click to copy)</small><p>panzojanmarkallen@gmail.com</p></div></div>
+          <div class="info"><span>⭐</span><div><small>Fun Fact</small><p> iykyk</p></div></div>
+        </div>
+
+        <button class="btn magnetic" data-goto="hobbies">Explore my hobbies →</button>
+      </div>
+    </section>
+
+    <!-- ============ PAGE 2: HOBBIES ============ -->
+    <section id="hobbies" class="page">
+      <h1 class="page-title">My <span>Hobbies</span></h1>
+      <p class="subtitle">Hover to tilt · Click to flip</p>
+
+      <div class="filters">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="creative">Creative</button>
+        <button class="chip" data-filter="active">Active</button>
+        <button class="chip" data-filter="chill">Chill</button>
+      </div>
+
+      <div class="hobby-grid">
+        <div class="hobby-card" data-cat="creative">
+          <div class="card-inner">
+            <div class="card-front"><span class="emoji">👟</span><h3>Running</h3><p>tap to flip</p></div>
+            <div class="card-back"><h3>Drawing</h3><p>Describe why you love this hobby and how you got started.</p><div class="meter"><span style="--lvl:85%"></span></div><small>Passion level</small></div>
+          </div>
+        </div>
+
+        <div class="hobby-card" data-cat="active">
+          <div class="card-inner">
+            <div class="card-front"><span class="emoji">🏀</span><h3>Basketball</h3><p>tap to flip</p></div>
+            <div class="card-back"><h3>Football</h3><p>Your position, favorite team, or best memory on the field.</p><div class="meter"><span style="--lvl:90%"></span></div><small>Passion level</small></div>
+          </div>
+        </div>
+
+        <div class="hobby-card" data-cat="active">
+          <div class="card-inner">
+            <div class="card-front"><span class="emoji">🏊</span><h3>Swimming</h3><p>tap to flip</p></div>
+            <div class="card-back"><h3>Swimming</h3><p>What's your favorite stroke or pool? Share a memorable moment from the water.</p><div class="meter"><span style="--lvl:85%"></span></div><small>Passion level</small></div>
+          </div>
+        </div>
+
+        <div class="hobby-card" data-cat="chill">
+          <div class="card-inner">
+            <div class="card-front"><span class="emoji">📚</span><h3>Reading manga</h3><p>tap to flip</p></div>
+            <div class="card-back"><h3>Reading</h3><p>Your favorite book, author, or genre goes here.</p><div class="meter"><span style="--lvl:70%"></span></div><small>Passion level</small></div>
+          </div>
+        </div>
+
+        <div class="hobby-card" data-cat="creative">
+          <div class="card-inner">
+            <div class="card-front"><span class="emoji">👨‍💻</span><h3>coding</h3><p>tap to flip</p></div>
+            <div class="card-back"><h3>coding</h3><p>What programming languages do you prefer? Share a fun fact about your coding journey.</p><div class="meter"><span style="--lvl:75%"></span></div><small>Passion level</small></div>
+          </div>
+        </div>
+
+        <div class="hobby-card" data-cat="chill">
+          <div class="card-inner">
+            <div class="card-front"><span class="emoji">🎮</span><h3>Gaming</h3><p>tap to flip</p></div>
+            <div class="card-back"><h3>Gaming</h3><p>Your all-time favorite game and why it's special.</p><div class="meter"><span style="--lvl:80%"></span></div><small>Passion level</small></div>
+          </div>
+        </div>
+
+        <div class="hobby-card" data-cat="active">
+          <div class="card-inner">
+            <div class="card-front"><span class="emoji">🎸</span><h3>Playing the guitar</h3><p>tap to flip</p></div>
+            <div class="card-back"><h3>Playing the guitar</h3><p>Your favorite song or band, or a story about learning to play.</p><div class="meter"><span style="--lvl:85%"></span></div><small>Passion level</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PAGE 3: MUSIC ============ -->
+    <section id="music" class="page">
+      <h1 class="page-title">Music & <span>Musicians</span></h1>
+      <p class="subtitle">Click an artist to play a little tune · Space = play/pause</p>
+
+      <div class="music-layout">
+        <div class="player glass">
+          <div class="vinyl" id="vinyl"><div class="label" id="vinylLabel">♪</div></div>
+          <h3 id="nowTitle">Pick a song</h3>
+          <p id="nowArtist">—</p>
+          <canvas id="visualizer" width="300" height="80"></canvas>
+          <div class="progress"><span id="progressBar"></span></div>
+          <div class="controls">
+            <button id="prevBtn">⏮</button> 
+            <button id="playBtn" class="play">▶</button>
+            <button id="nextBtn">⏭</button>
+          </div>
+        </div>
+
+        <div class="playlist glass">
+          <h3>My Favorite Artists</h3>
+          <ul id="playlist"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
+
